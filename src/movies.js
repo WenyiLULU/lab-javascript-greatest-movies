@@ -70,7 +70,7 @@ function trunToMinutes(duration){
   }
 }
 function turnHoursToMinutes(moviesArray) {
-  const turnedMovies = [...moviesArray];
+  const turnedMovies = JSON.parse(JSON.stringify(moviesArray));
   for (let i = 0; i < turnedMovies.length; i+=1){
     turnedMovies[i].duration = trunToMinutes(turnedMovies[i].duration)
   }
